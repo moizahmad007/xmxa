@@ -1,0 +1,229 @@
+/* Keyframes for the animated gradient background */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Keyframes for a bouncing effect */
+@keyframes bounceText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Keyframes for the glowing effect */
+@keyframes glowingIcon {
+  0% {
+    box-shadow: 0 0 5px #A28D85, 0 0 10px #2E5D5A, 0 0 20px #333352;
+  }
+  50% {
+    box-shadow: 0 0 15px #A28D85, 0 0 30px #2E5D5A, 0 0 40px #333352;
+  }
+  100% {
+    box-shadow: 0 0 5px #A28D85, 0 0 10px #2E5D5A, 0 0 20px#343451;
+  }
+}
+
+/* Contact Bar Styling */
+.contact-bar {
+  background: linear-gradient(270deg, #333352, #343451, #333352);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite, pulseGlow 2s infinite; /* Animated gradient + pulsating glow */
+  padding: 10px 0;
+  text-align: center;
+  position: fixed; /* Keeps the contact bar fixed at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the contact bar stays above other content */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  border-bottom: 2px solid #343451; /* Adds a neat bottom border */
+}
+
+/* Styling the contact bar list */
+.contact-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex; /* Align items horizontally */
+  align-items: center;
+}
+
+/* Individual items in the contact bar */
+.contact-bar li {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  color: #f0f0f0;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect on contact bar items */
+.contact-bar li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #343451; 
+}
+
+/* Styling the icons */
+.contact-bar img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  animation: glowingIcon 1.5s infinite alternate;
+}
+
+body {
+  margin-top: 70px;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-bar li:hover span {
+  animation: bounceText 0.5s ease-out; 
+  color: #2E5D5A; 
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 600px) {
+  .contact-bar ul {
+    flex-direction: column; 
+  }
+
+  .contact-bar li {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+
+
+
+  /* Main Top Bar */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #2E5D5A;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .logo h1{
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    color:  #A28D85;
+
+  }
+  .menu-icon,
+  .logo,
+  .right-icons,
+  .login-icon,
+  .wish-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon img,
+  .logo img,
+  .login-icon img,
+  .wish-icon img,
+  .right-icons .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+/* Main Right Icons Container */
+.right-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Individual Icon Container (Login, Wishlist, Search, Cart) */
+.right-icons .login-icon,
+.right-icons .wish-icon,
+.right-icons .search-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 15px; /* Spacing between icons */
+}
+
+/* Logo and Icon Size */
+.right-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Increase size of icons when hovered */
+.right-icons img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Wrapper for Search and Cart Icons */
+.search-icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Cart Icon Specific Styling */
+.cart-icon {
+  margin-left: 15px;
+}
+
+/* Mobile Responsiveness (Max-width: 768px) */
+@media (max-width: 768px) {
+  /* Stack icons vertically on small screens */
+  .right-icons {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left on mobile */
+    margin-top: 10px;
+  }
+
+  /* Make the icons larger on mobile */
+  .right-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Spacing between icons on mobile */
+  .right-icons .login-icon,
+  .right-icons .wish-icon,
+  .right-icons .search-icons {
+    margin-left: 0;
+    margin-bottom: 10px; /* Spacing between icons when stacked */
+  }
+
+  /* Hide other icons (Login, Wishlist) on mobile */
+  .right-icons .login-icon,
+  .right-icons .wish-icon {
+    display: none;
+  }
+
+  /* Show only the search and cart icons on mobile */
+  .right-icons .search-icons {
+    display: flex;
+  }
+}
+
+
+  

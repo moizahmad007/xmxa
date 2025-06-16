@@ -1,0 +1,91 @@
+/* Overlay background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Layer below the login container */
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Add transition for smooth fade-out */
+  }
+  
+  /* Login container */
+  .login-container {
+    position: fixed;
+    top: 0;
+    right: 0; /* Start off-screen */
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 20px;
+    transition: right 0.3s ease; /* Add transition for sliding effect */
+  }
+  
+  /* When the modal is open, slide it in */
+  .login-container.open {
+    right: 0; /* Slide in from right */
+  }
+  
+  /* Overlay when the modal is open (fade-in) */
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Login container text */
+  .login-container p{
+    margin-top: 1px;
+    color: #2E5D5A;
+  }
+  
+  /* Login header */
+  .login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Close button style */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Login form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  /* Input fields */
+  .login-form input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #2E5D5A;
+    border-radius: 5px;
+  }
+  
+  /* Submit button */
+  .login-btn {
+    padding: 10px;
+    background-color: #2E5D5A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Submit button hover effect */
+  .login-btn:hover {
+    background-color: #a28d85;
+  }
+  

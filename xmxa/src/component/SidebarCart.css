@@ -1,0 +1,102 @@
+/* SidebarCart.css */
+.sidebarCart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1100; /* Ensure the sidebar is on top of other elements */
+  }
+  
+  .sidebarCart.open {
+    transform: translateX(0);
+  }
+  
+  .cart-view {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .cart-view li{
+   border-bottom: 1px solid #ccc;
+  }
+  .cart-view-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make sure it's full width */
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .close-btn.rotated {
+    transform: rotate(180deg); /* Rotate when clicked */
+  }
+  
+  .close-btn:hover {
+    transform: rotate(180deg); /* Rotate when hovered */
+  }
+  
+  .close-btn:active {
+    transform: rotate(180deg); /* Rotate when clicked or touched */
+  }
+  
+  .cart-logo {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .cart-logo img {
+    width: 50px;
+    height: 50px;
+  }
+   .cart-view p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;;
+   }
+  .return-to-shop {
+    background-color: #2E5D5A;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 80px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .return-to-shop:hover {
+    background-color: #25504d;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1099; /* Ensure the overlay is above the content, but below the sidebar */
+  }
+  

@@ -1,0 +1,143 @@
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+.arrow-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.sidebar h2 {
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.first-menu,
+.second-menu,
+.third-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-menu,
+.second-menu,
+.third-menu{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.first-menu-content,
+.second-menu-content,
+.third-menu-content {
+  display: flex; /* Use 'flex' for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: stretch; /* Ensure full width for borders */
+}
+
+.first-menu-content li,
+.second-menu-content li,
+.third-menu-content li {
+  width: 100%; /* Ensure items span the full width */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Add vertical padding for spacing */
+  border-bottom: 1px solid #ccc; /* Ensure the border is applied */
+  box-sizing: border-box; /* Include padding and border in dimensions */
+}
+
+
+.last-menu {
+  width: 100%; /* Ensure items span the full width */
+  margin: 0px; /* Reset margin */
+  padding: 0; /* Add vertical padding for spacing */
+  border-bottom: 1px solid #ccc; /* Ensure the border is applied */
+  box-sizing: border-box; 
+}
+.last-menu p{
+  margin: 10px;
+}
+.last-menu a {
+  width: 100%; /* Ensure items span the full width */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Add vertical padding for spacing */
+  box-sizing: border-box; 
+}
+
+.plus-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin:  0;
+}
+
+.sidebar ul li a {
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  margin-top: 0;
+  transition: color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #000;
+}
+
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+}

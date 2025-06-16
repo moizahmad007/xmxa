@@ -1,0 +1,108 @@
+/* Main container for the images */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px; /* Space between each image item */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  /* Each image item styling */
+  .image-item {
+    text-align: center;
+    flex: 1 1 18%; /* Each item will take up around 18% of the container width */
+    margin-bottom: 20px; /* Space below each image item */
+  }
+  
+  /* Image styling */
+  .image-item img {
+    width: 80px;  /* Default image size */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #fff; /* White border around the image */
+    box-shadow: 0 4px 10px #3d7672; /* Adds a shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  }
+  
+  /* Hover effects on images */
+  .image-item img:hover {
+    transform: scale(1.1); /* Slight scaling on hover */
+    box-shadow: 0 8px 20px #3d7672; /* Enhanced shadow on hover */
+  }
+  
+  /* Name text styling below the image */
+  .image-item span {
+    display: block;
+    font-size: 14px;  /* Default text size */
+    color: #2E5D5A;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 8px;
+    font-weight: 600; /* Make the name bold */
+  }
+  
+  /* Responsive Design: For screens smaller than 480px (mobile phones) */
+  @media screen and (max-width: 480px) {
+    .image-container {
+      justify-content: space-between;
+      gap: 5px; /* Reduce the gap between items */
+    }
+  
+    .image-item {
+      flex: 1 1 18%; /* 5 items per row on mobile */
+    }
+  
+    .image-item:nth-child(n+6) {
+      display: none; /* Hide items after the 5th item */
+    }
+  
+    .image-item img {
+      width: 50px; /* Adjust image size for mobile */
+      height: 50px;
+    }
+  
+    .image-item span {
+      font-size: 10px; /* Reduce font size on mobile */
+    }
+  }
+  
+  /* Responsive Design: For screens between 481px and 768px (tablet screens) */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .image-container {
+      justify-content: space-between;
+    }
+  
+    .image-item {
+      flex: 1 1 12%; /* 8 items per row on tablets */
+    }
+  
+    .image-item img {
+      width: 60px; /* Adjust image size for tablet */
+      height: 60px;
+    }
+  
+    .image-item span {
+      font-size: 12px; /* Adjust font size for tablet */
+    }
+  }
+  
+  /* For screens larger than 768px (full screen) */
+  @media screen and (min-width: 769px) {
+    .image-container {
+      justify-content: space-between;
+    }
+  
+    .image-item {
+      flex: 1 1 12%; /* 8 items per row on large screens */
+    }
+  
+    .image-item img {
+      width: 80px; /* Adjust image size for larger screens */
+      height: 80px;
+    }
+  
+    .image-item span {
+      font-size: 14px; /* Default font size for larger screens */
+    }
+  }
+  
