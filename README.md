@@ -1,2 +1,2 @@
 # xmxa
-xmxa website
+xmxa online shopping website
